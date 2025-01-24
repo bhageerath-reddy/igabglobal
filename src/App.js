@@ -3,7 +3,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import './index.css';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Routes,
   Route
 } from 'react-router-dom';
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <HashRouter>
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -42,7 +42,7 @@ function App() {
             <Route path="/get-demo" element={<DemoProduct />} /> 
           </Routes>
         </ScrollToTop>
-      </Router>
+        </HashRouter>
     </>
   );
 }
